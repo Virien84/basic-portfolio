@@ -1,0 +1,172 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body common */
+html, body {
+    margin: 0;
+    height:100%;
+    width:100%;
+    padding:0;
+}
+section {
+    display: block;
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+}
+
+/* Navbar */
+nav {
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    background-color: #282828;
+    position: fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    color:white;
+    transition: 0.5s;
+}
+nav a:hover{
+    color:#c02f57;
+}
+
+nav svg{
+    width:50px;
+    height:50px;
+    stroke-width:1.7px;
+    padding-left:60px;
+    padding-right:60px;
+}
+
+
+
+/* Hero */
+.hero{
+    background-color: #333333;
+    color:white;
+}
+/* About */
+.about{
+    background-color:black;
+    color: #57ff57;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Anonymous Pro', monospace;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.about-right{
+    display:flex;
+    align-items: right;
+    flex-direction: column;
+}
+.about-right pre { margin: 0; }
+.about-right .cursor {
+  width: 8px;
+  height: 16px;
+  display: inline-block;
+  animation: cursor-blink 333ms infinite;
+}
+@keyframes cursor-blink {
+  50% { background-color: #57ff57; }
+}
+/* Contact */
+.contact{
+    background-color: #333333;
+    /* Firefox */
+    height: -moz-calc(100% - 80px);
+    /* WebKit */
+    height: -webkit-calc(100% - 80px);
+    /* Opera */
+    height: -o-calc(100% - 80px);
+    /* Standard */
+    height: calc(100% - 80px);
+    color:white;
+}
+/* Footer */
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #282828;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:#c02f57;
+    font-family: 'Roboto', sans-serif;  
+}
+
+footer .copyright{
+    display:flex;
+    align-items: center;
+}
+
+footer .icons svg{
+    width:30px;
+    height:30px;
+    stroke-width:1.5px;
+}
+
+footer .icons a{
+    color:#c02f57;
+    transition: 0.5s;
+}
+footer .icons a:hover{
+    color:white;
+    text-decoration: none;
+}
