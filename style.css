@@ -1,239 +1,204 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+html {
+  scroll-behavior: smooth;
 }
 body {
-	line-height: 1;
+  font-family: "Roboto", sans-serif;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Body common */
-html{
-    scroll-behavior: smooth;
-}
-html, body {
-    margin: 0;
-    height:100%;
-    width:100%;
-    padding:0;
-    font-family:'Roboto',sans-serif;
-}
-section {
-    display: block;
-    height:100%;
-    width:100%;
-    box-sizing:border-box;
-}
-
-/* Navbar */
+/* Navegación */
 nav {
-    overflow: hidden;
-    height: 80px;
-    width: 100%;
-    /*background-color: #282828;*/
-    position: fixed;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-nav a{
-    color:white;
-    transition: 0.5s;
-}
-nav a:hover{
-    color:#c02f57;
-}
-
-nav svg{
-    width:40px;
-    height:40px;
-    stroke-width:1.5px;
-    padding-left:10px;
-    padding-right:10px;
-}
-
-/* Hero */
-.hero{
-    background: rgb(0,0,0);
-    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(105,105,105,1) 82%);
-    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(105,105,105,1) 82%);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 22%, rgba(105,105,105,1) 82%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#696969",GradientType=1);
-    color:white;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-.hero-left{
-    margin-top:100px;
-}
-.hero-left h1{
-    color:#c02f57;
-    font-size: 10vh;
-}
-.hero-left h2{
-    font-size: 5vh;
-}
-.hero-left h4{
-    font-size: 4vh;
-    text-decoration: underline;   
-	text-decoration-color: #c02f57;
-}
-.hero-right{
-    margin-top:30px;
-}
-.hero-right img{
-    max-width: 100%;
-    height: auto;
-}
-
-/* About */
-.about{
-    background-color:black;
-    color: #57ff57;
-    font-size: 16px;
-    font-weight: 100;
-    font-family: 'Anonymous Pro', monospace;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-around;
-}
-
-.about-right{
-    display:flex;
-    align-items: right;
-    flex-direction: column;
-}
-.about-right pre { 
-    margin: 0;
-}
-.about-right .cursor {
-  width: 8px;
-  height: 16px;
-  display: inline-block;
-  animation: cursor-blink 333ms infinite;
-}
-@keyframes cursor-blink {
-  50% { background-color: #57ff57; }
-}
-
-.window{
-  background-color: white;
-  border: 3px solid lightgray;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.43);
-  border-radius: 5px;
-}
-.topbar{
-  height: 30px;
   width: 100%;
-  background-color: lightgray;
+  height: 80px;
+
+  background-color: none;
+
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 10;
+}
+
+nav a:not(:last-child) {
+  margin-right: 25px;
+}
+
+nav a {
+  color: white;
+  transition: 0.5s;
+}
+nav a:hover {
+  color: #c02f57;
+}
+
+nav svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Secciones */
+section {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.close{
-  height: 10px;
-  width: 10px;
-  background-color: #f74544;
-  border-radius: 50%;
-  margin-left: 15px;
-  border: 1px solid darken(#9c00ff, 10%);
-}
-.hide{
-  height: 10px;
-  width: 10px;
-  background-color: #fbaf15;
-  border-radius:50%;
-  margin-left: 10px;
-  border: 1px solid darken(#9c00ff, 10%);
-}
-.full{
-  height: 10px;
-  width: 10px;
-  background-color: #38c228;
-  border-radius: 50%;
-  margin-left: 10px;
-  border: 1px solid darken(#9c00ff, 10%);
+
+section:nth-of-type(1) {
+  background-color: #5d43bb;
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 22%,
+    rgba(105, 105, 105, 1) 82%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 22%,
+    rgba(105, 105, 105, 1) 82%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 22%,
+    rgba(105, 105, 105, 1) 82%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#696969",GradientType=1);
+  color: white;
 }
 
-.social{
-    background-color: lightgray;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.social svg{
-    width:30px;
-    height:30px;
-    stroke-width:1.5px;
-    padding-top:10px;
-    padding-bottom:5px;
-}
-.social a{
-    color:navy;
-    transition: 0.5s;
-}
-.social a:hover{
-    color:darkgreen;
-    text-decoration: none;
+section:nth-of-type(2) {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    166deg,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(105, 105, 105, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    166deg,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(105, 105, 105, 1) 100%
+  );
+  background: linear-gradient(
+    166deg,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(105, 105, 105, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#696969",GradientType=1);
+  color: #57ff57;
 }
 
-@media (min-width: 900px){
-    nav svg{
-        width:50px;
-        height:50px;
-        stroke-width:1.7px;
-        padding-left:60px;
-        padding-right:60px;
-    }
-    .hero, .about{
-        flex-direction: row;
-    }
-    .hero-left, .hero-right{
-        margin-top:0px;
-    }
+/*Seccion Hero*/
+.hero,
+.about {
+  height: 80%;
+  width: 80%;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*border: 5px solid red;*/
+}
+
+.hero > div {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.hero-left {
+  /*background-color: #96ceb4;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-left h1 {
+  color: #c02f57;
+  font-size: 6vh;
+}
+.hero-left h2 {
+  font-size: 4vh;
+}
+.hero-left h4 {
+  font-size: 4vh;
+  text-decoration: underline;
+  text-decoration-color: #c02f57;
+}
+
+.hero-right img {
+  max-width: 100%;
+}
+
+/*Seccion About*/
+
+.about > div {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.about > .left {
+  background-color: #96ceb4;
+  order: 1;
+}
+
+.about > .right {
+  background-color: blueviolet;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
   }
+  .about {
+    flex-direction: row;
+  }
+  nav svg {
+    width: 80px;
+    height: 80px;
+    stroke-width: 1.5px;
+  }
+  .about > .left {
+    order: 0;
+  }
+  .hero-right img {
+    height: 100%;
+  }
+  .hero-left h1 {
+    font-size: 10vh;
+  }
+  .hero-left h2 {
+    font-size: 5vh;
+  }
+  .hero-left h4 {
+    font-size: 4vh;
+  }
+}
