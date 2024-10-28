@@ -8,6 +8,28 @@
 </head>
 <body>
     <div class="bg-suminagashi">
+        <picture>
+            <source
+                srcset="
+                    images/background/webp/background-640.webp 640w,
+                    images/background/webp/background-1024.webp 1024w,
+                    images/background/webp/background.webp
+                "
+                sizes="100vw"
+                type="image/webp"
+            >
+            <source
+                srcset="
+                images/background/jpg/background-640.jpg 640w,
+                images/background/jpg/background-1024.jpg 1024w,
+                images/background/jpg/background.jpg
+                "
+                sizes="100vw"
+                type="image/jpeg"
+            >
+            <img src="images/background/jpg/background.jpg" alt="" class="bg-image">
+        </picture>
+        <div class="bg-overlay"></div>
         <div class="container">
             <img src="images/avatar.jpg" alt="Avatar" class="avatar">
             <h1>David Antón Álvarez</h1>
